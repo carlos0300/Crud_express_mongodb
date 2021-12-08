@@ -1,0 +1,24 @@
+{
+  "name": "Crud_express_mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos0300/Crud_express_mongodb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlos0300/Crud_express_mongodb/issues"
+  },
+  "homepage": "https://github.com/carlos0300/Crud_express_mongodb#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.1.0"
+  }
+}
