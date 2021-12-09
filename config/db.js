@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const DB_URI = ''
+const DB_URI = 'mongodb://root:root@172.19.0.2:27017/'
 
 module.exports = () =>{
 
@@ -17,7 +17,7 @@ module.exports = () =>{
                 if(err){
                     console.log('DB: ERROR!!')
                 }else{
-                    console.log('Conexión correcta')
+                    console.log('Conexion correcta')
                 }
             }
         )
