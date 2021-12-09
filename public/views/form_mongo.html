@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../../src/Controllers/insert.js"></script>
 </head>
 <body>
-    <center><h1>Formulario para mongo</h1></center>
+    <center><h1>Formulario de inscripción</h1>
+    </br>
+    <table cellspacing="8">
+        <tr align="center">
+            <td>Id</td>
+            <td>Marca</td>
+            <td>Nombre</td>
+            <td>Año</td>
+            <td>Color</td>
+        </tr>
+        <tr>
+            <form onsubmit=insertMoto()>
+                <td><input type="text" id="id"></td>
+                <td><input type="text" id="marca"></td>
+                <td><input type="text" id="nombre"></td>
+                <td><input type="text" id="year"></td>
+                <td><input type="text" id="color"></td>
+                <td><input type="submit"></td>
+            </form>
+        </tr>
+
+    </table>
+</center>
+
 </body>
 </html>
