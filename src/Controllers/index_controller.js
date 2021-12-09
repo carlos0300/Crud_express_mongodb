@@ -1,17 +1,12 @@
+const path = require('path')
 const controller = {}
 
-controller.index = (req, res, marca) =>{
+controller.index = (req, res) =>{
     res.send('La conexión ha sido exitosa uwu')
 }
 
-controller.add = (req, res, marca) =>{
-    var id = req.id;
-    var marca = marca;
-    var nombre = req.nombre;
-    var year = req.year;
-    var color = req.color;
-    console.log(marca)
-    res.send('a ver')
+controller.add = (req, res) =>{
+    res.sendFile(path.join(__dirname, '../../public/views/form_mongo.html'))
 }
 
 module.exports = controller
