@@ -1,4 +1,5 @@
 const path = require('path')
+
 const controller = {}
 
 controller.index = (req, res) =>{
@@ -7,6 +8,12 @@ controller.index = (req, res) =>{
 
 controller.add = (req, res) =>{
     res.sendFile(path.join(__dirname, '../../public/views/form_mongo.html'))
+}
+
+controller.insert = (req, res) =>{
+    var moto = req.body
+    console.log(moto)
+    res.redirect('addmoto')
 }
 
 module.exports = controller

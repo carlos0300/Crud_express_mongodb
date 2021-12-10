@@ -6,6 +6,8 @@ const controller = require('../Controllers/index_controller')
 
 router.get('/', controller.index)
 
-router.get('/addMoto', controller.add)
+router.get('/addmoto', controller.add)
+
+router.post('/addmotos', controller.insert)
 
 module.exports = router

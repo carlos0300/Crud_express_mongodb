@@ -19,12 +19,12 @@
             <td>Color</td>
         </tr>
         <tr>
-            <form onsubmit=insertMoto()>
-                <td><input type="text" id="id"></td>
-                <td><input type="text" id="marca"></td>
-                <td><input type="text" id="nombre"></td>
-                <td><input type="text" id="year"></td>
-                <td><input type="text" id="color"></td>
+            <form action="/addMotos" method="POST" onsubmit=insertMoto()>
+                <td><input type="text" name="id"></td>
+                <td><input type="text" name="marca"></td>
+                <td><input type="text" name="nombre"></td>
+                <td><input type="text" name="year"></td>
+                <td><input type="text" name="color"></td>
                 <td><input type="submit"></td>
             </form>
         </tr>
