@@ -11,9 +11,22 @@ controller.add = (req, res) =>{
 }
 
 controller.insert = (req, res) =>{
-    var moto = req.body
-    console.log(moto)
-    res.redirect('addmoto')
+
+    const PersonaModel = require('../Models/Persona')
+    const insert = async() => {
+        const persona = new PersonaModel(
+            {
+                name: req.body.name,
+                lastname: req.body.lastname,
+                age: req.body.age,
+                hobbie: req.body.hobbie,
+                email: req.body.email
+            }      
+        )
+            const resultado = await persona.save()
+    }
+    insert()
+    res.redirect('addPersona') 
 }
 
 module.exports = controller

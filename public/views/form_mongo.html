@@ -5,26 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../../src/Controllers/insert.js"></script>
 </head>
 <body>
     <center><h1>Formulario de inscripción</h1>
     </br>
     <table cellspacing="8">
         <tr align="center">
-            <td>Id</td>
-            <td>Marca</td>
             <td>Nombre</td>
-            <td>Año</td>
-            <td>Color</td>
+            <td>Apellido</td>
+            <td>Edad</td>
+            <td>Hobbie</td>
+            <td>Email</td>
         </tr>
         <tr>
-            <form action="/addMotos" method="POST" onsubmit=insertMoto()>
-                <td><input type="text" name="id"></td>
-                <td><input type="text" name="marca"></td>
-                <td><input type="text" name="nombre"></td>
-                <td><input type="text" name="year"></td>
-                <td><input type="text" name="color"></td>
+            <form action="/addMotos" method="POST">
+                <td><input type="text" name="name"></td>
+                <td><input type="text" name="lastname"></td>
+                <td><input type="number" name="age"></td>
+                <td><input type="text" name="hobbie"></td>
+                <td><input type="text" name="email"></td>
                 <td><input type="submit"></td>
             </form>
         </tr>
