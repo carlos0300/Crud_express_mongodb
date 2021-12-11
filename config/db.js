@@ -8,4 +8,3 @@ mongoose.connect(URI)
 
 module.exports = mongoose
 
-//conexión con redis
