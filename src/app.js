@@ -5,18 +5,14 @@ const app = express()
 //acá debemos pasar las rutas
 const routes = require('./Routes/index_routes')
 //const db = require('../config/db')
-const redis = require('redis');
+const redis = require('redis')
+
 client = redis.createClient({
     host: '172.17.0.2',
-    port: 6379
+    port: 6379,
+    password: 'root'
 })
-if(client.open){
-    console.log("connected")
-}
-client.on('connect', () => {
-    console.log('connected')
-})
-client.set("id", 2)
+client.set("id", "facilito2")
 
 app.use(routes)
 
