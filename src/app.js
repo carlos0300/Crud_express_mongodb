@@ -4,7 +4,7 @@ const app = express()
 
 //acá debemos pasar las rutas
 const routes = require('./Routes/index_routes')
-//const db = require('../config/db')
+const db = require('../config/db')
 const redis = require('redis')
 
 client = redis.createClient({
