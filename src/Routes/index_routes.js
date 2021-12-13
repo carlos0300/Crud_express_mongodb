@@ -11,6 +11,8 @@ router.get('/', controller.index)
 
 router.get('/addPersona', controller.add)
 
+router.get('/getPersonaMongo',controller.getmongo)
+
 router.post('/insertPersona', bodyParser.urlencoded({extended:false}), controller.insert)
 
 module.exports = router

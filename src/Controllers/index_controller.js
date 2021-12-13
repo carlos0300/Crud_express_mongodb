@@ -1,5 +1,5 @@
 const path = require('path')
-
+var cont = 0;
 const controller = {}
 
 controller.index = (req, res) =>{
@@ -8,6 +8,18 @@ controller.index = (req, res) =>{
 
 controller.add = (req, res) =>{
     res.sendFile(path.join(__dirname, '../../public/views/form.html'))
+}
+
+controller.getmongo =(req, res) =>{
+   // res.sendFile(path.join(__dirname, '../../public/views/getmongo.html'))
+   
+    const PersonaModel =require('../Models/Persona')
+   
+    PersonaModel.find({id:0},(err,docs)=>{
+       
+        res.send(docs.reduce({'name'}), path.join(__dirname, '../../public/views/getmongo.html'))
+      
+    })
 }
 
 controller.insert = (req, res) =>{
@@ -19,6 +31,7 @@ controller.insert = (req, res) =>{
     const insert = async() => {
         const persona = new PersonaModel(
             {
+                id: cont,
                 name: req.body.name,
                 lastname: req.body.lastname,
                 age: req.body.age,
@@ -30,7 +43,7 @@ controller.insert = (req, res) =>{
     }
     insert()
     //insert a redis
-    dbRedis.hmset("01", {
+    dbRedis.hmset(cont, {
         "name": req.body.name,
         "lastname": req.body.lastname,
         "age": req.body.age,
@@ -38,6 +51,6 @@ controller.insert = (req, res) =>{
         "email": req.body.email
     })
     res.redirect('addPersona') 
+    cont=cont+1;
 }
-
 module.exports = controller
