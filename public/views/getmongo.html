@@ -4,36 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="getm.js"></script>
     <title>ViewDBMongo</title>
 </head>
 <body>
 </br>
     <center><h1>MONGODB</h1>
     </br>
-    <table cellspacing="20" class="table">
-        <thead>
-            <tr>
-                <th scope="col">Nombre</th>                 
-                <th scope="col">Apellido</th> 
-                <th scope="col">Edad</th> 
-                <th scope="col">Hobbie</th> 
-                <th scope="col">Email</th> 
-            </tr>
-        </thead>
-        <tbody>
-            
-            <tr>
-               
-                <th {{docs.id}}></th>
-                <th {{docs.name}}>{{docs.name}}</th>
-                <th {{docs.name}}>{{docs.name}}</th>
-                <th>{{docs.name}}</th>
-                <th>{{docs.name}}</th>
-            </tr>
-           
-        </tbody>
-        
-    </table>
+    <input type="button" value="Genera una tabla" onclick="genera_tabla()">
+
 </center>
 
 </body>

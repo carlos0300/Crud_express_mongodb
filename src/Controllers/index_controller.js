@@ -12,14 +12,8 @@ controller.add = (req, res) =>{
 
 controller.getmongo =(req, res) =>{
    // res.sendFile(path.join(__dirname, '../../public/views/getmongo.html'))
-   
-    const PersonaModel =require('../Models/Persona')
-   
-    PersonaModel.find({id:0},(err,docs)=>{
-       
-        res.send(docs.reduce({'name'}), path.join(__dirname, '../../public/views/getmongo.html'))
-      
-    })
+   res.sendFile(path.join(__dirname, '../../public/views/getmongo.html'))
+
 }
 
 controller.insert = (req, res) =>{
